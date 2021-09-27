@@ -1,0 +1,101 @@
+.section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+header {
+    text-align: center;
+    margin-top: 100px;
+    flex: 1;
+}
+header div:first-child {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #181b21;
+}
+
+header div:last-child {
+    color: gray;
+}
+
+header .link{
+    color: gray;
+    transition: .4s;
+}
+
+header .link:hover{
+    text-decoration-color: rgb(29, 29, 29);
+
+}
+.section-container .two-btn {
+    display: flex;   
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.section-container .two-btn .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 10px 15px;
+    text-decoration: none;
+    opacity: .85;
+}
+@media (max-width:567px) {
+    .section-container .two-btn {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 80px;    
+    }
+    .section-container .two-btn .link {
+        width: 300px;
+    }
+   
+}
+
+.two-btn .link:first-child {
+    background-color: rgb(29, 29, 29);
+    color: white;
+
+    
+}
+.two-btn .link:nth-child(2){
+    background-color: white;
+    color: rgb(56, 55, 55);
+}
+.arrow-down{
+    font-size: 25px;
+    color: rgb(247, 244, 244);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    animation-name: arrowAnimation;
+    animation-duration: 1.3s ;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+
+@keyframes arrowAnimation {
+    25%{
+        top: 110%;
+    }
+    50%{
+        top: 105%;
+    }
+    75%{
+        top: 110%;
+    }
+    100%{
+        top :100%;
+    }
+    
+}
